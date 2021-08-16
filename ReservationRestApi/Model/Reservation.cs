@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ReservationRestApi.Model
 {
     public class Reservation
-    {
+    {   
         public int ReservationId { get; set; }
         [Required,MaxLength(10)]
         public  string ReservationCode { get; set; }
@@ -24,8 +25,8 @@ namespace ReservationRestApi.Model
         public string Currency { get; set; }
 
         public decimal? commission { get; set; }
-        
-      
-        
+
+        public ICollection<Guest>Guest { get; set; }
+
     }
 }
