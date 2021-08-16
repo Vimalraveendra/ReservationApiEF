@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{D3A12A60-B44C-421C-9F41-9EBB21D01351}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ReservationRestApi/Model/Reservation.cs">
+    <Files>
+      <File FileName="ReservationRestApi/Model/Reservation.cs" Line="1" Column="1" />
+      <File FileName="ReservationRestApi/Model/Guest.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ReservationRestApi" expanded="True">
+            <Node name="ReservationRestApi" expanded="True">
+              <Node name="Model" expanded="True">
+                <Node name="Reservation.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ReservationRestApi FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
