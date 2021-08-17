@@ -10,26 +10,27 @@ using ReservationRestApi.Repository.Contract;
 
 namespace ReservationRestApi.Controllers
 {
-    [Route("api/Reservations")]
-    public class ReservationController : ControllerBase
+    [Route("api/Guest")]
+    public class GuestController : ControllerBase
     {
-        private readonly IReservationRepository<Reservation> _ReservationRepository;
-        public ReservationController(IReservationRepository<Reservation> ReservationRepository)
-        {
-            _ReservationRepository = ReservationRepository;
-        }
 
-        [HttpGet]
-         [Route("GetAllReservations")]
+         private readonly IGuestRepository<Guest> _guestRepository;
 
-         public IActionResult GetAllReservations()
-        {
-            IEnumerable<Reservation> authors = _ReservationRepository.GetAllReservations();
-            return Ok(authors);
-        }
+            public GuestController(IGuestRepository<Guest> GuestRepository)
+            {
+                _guestRepository = GuestRepository;
+            }
 
-        // GET: api/values
-        [HttpGet]
+            [HttpGet]
+            [Route("GetAllGuest")]
+
+            public IActionResult GetAllGuest()
+            {
+                IEnumerable<Guest> authors = _guestRepository.GetAllGuest();
+                return Ok(authors);
+            }
+            // GET: api/values
+            [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };

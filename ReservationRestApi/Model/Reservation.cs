@@ -15,7 +15,7 @@ namespace ReservationRestApi.Model
         public DateTime CreationDate= DateTime.Now;
 
         public double Price { get; set; }
-
+            
         public DateTime CheckInDate = DateTime.Now;
        
         public DateTime CheckOutDate = DateTime.Now;
