@@ -60,3 +60,15 @@
 /Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.dll
 /Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.pdb
 /Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.genruntimeconfig.cache
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.RazorAssemblyInfo.cache
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.RazorAssemblyInfo.cs
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.TagHelpers.input.cache
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.TagHelpers.output.cache
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.RazorCoreGenerate.cache
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/Razor/View/Index.cshtml.g.cs
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/Razor/View/Shared/_Layout.cshtml.g.cs
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.RazorTargetAssemblyInfo.cs
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/bin/Debug/netcoreapp3.1/ReservationRestApi.Views.dll
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/bin/Debug/netcoreapp3.1/ReservationRestApi.Views.pdb
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/ReservationRestApi.Views.pdb
+/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/Debug/netcoreapp3.1/Razor/View/_ViewImports.cshtml.g.cs

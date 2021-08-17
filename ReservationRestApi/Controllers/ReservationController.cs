@@ -21,15 +21,19 @@ namespace ReservationRestApi.Controllers
 
         [HttpGet]
          [Route("GetAllReservations")]
+       
 
-         public IActionResult GetAllReservations()
+        public IActionResult GetAllReservations()
         {
+           
             IEnumerable<Reservation> authors = _ReservationRepository.GetAllReservations();
             return Ok(authors);
         }
 
         [HttpDelete("DeleteAllReservations")]
         public void DeleteAllReservation() => _ReservationRepository.DeleteAllReservation();
+
+
 
         // GET: api/values
         [HttpGet]

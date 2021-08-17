@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 namespace ReservationRestApi.Model
 {
@@ -8,6 +9,8 @@ namespace ReservationRestApi.Model
         {
             Database.Migrate();
         }
+
+        public static object Reservation { get; internal set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Guest> Guests { get; set; }
         public object Guest { get; internal set; }
@@ -154,5 +157,7 @@ namespace ReservationRestApi.Model
 
             );
         }
+
+       
     }
 }
