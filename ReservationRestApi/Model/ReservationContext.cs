@@ -10,6 +10,8 @@ namespace ReservationRestApi.Model
         }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Guest> Guests { get; set; }
+        public object Guest { get; internal set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
             
         {

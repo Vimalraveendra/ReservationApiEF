@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ReservationRestApi.Model;
+using ReservationRestApi.Repository.Contract;
+using ReservationRestApi.Repository.Implementation;
 
 namespace ReservationRestApi
 {
@@ -29,6 +31,8 @@ namespace ReservationRestApi
         {
             services.AddControllers();
             services.AddDbContext<ReservationContext>(op => op.UseSqlServer(Configuration["ConnectionString:ReservationStoreDB"]));
+            services.AddScoped<IReservationRepository<Reservation>, ReservationRepository>();
+            services.AddScoped<IGuestRepository<Guest>, GuestRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
