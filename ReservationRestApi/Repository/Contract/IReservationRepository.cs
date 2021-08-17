@@ -6,5 +6,6 @@ namespace ReservationRestApi.Repository.Contract
     public interface IReservationRepository<T>
     {
         IEnumerable<T> GetAllReservations();
+        void DeleteAllReservation();
     }
 }

@@ -20,6 +20,12 @@ namespace ReservationRestApi.Repository.Implementation
             return _reservationContext.Reservations.ToList();
         }
 
-        
+        public void DeleteAllReservation()
+        {
+            var itemsToDelete = _reservationContext.Set<Reservation>();
+            _reservationContext.Reservations.RemoveRange(itemsToDelete);
+           _reservationContext.SaveChanges();
+        }
+            
     }
 }

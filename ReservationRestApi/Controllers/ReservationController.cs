@@ -28,6 +28,9 @@ namespace ReservationRestApi.Controllers
             return Ok(authors);
         }
 
+        [HttpDelete("DeleteAllReservations")]
+        public void DeleteAllReservation() => _ReservationRepository.DeleteAllReservation();
+
         // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()

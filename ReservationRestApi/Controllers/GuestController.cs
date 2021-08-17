@@ -29,8 +29,44 @@ namespace ReservationRestApi.Controllers
                 IEnumerable<Guest> authors = _guestRepository.GetAllGuest();
                 return Ok(authors);
             }
-            // GET: api/values
-            [HttpGet]
+
+
+        [HttpPost]
+        [Route("SaveGuest")]
+        public IActionResult AddGuest([FromBody] Guest authorparam)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Guest guest = _guestRepository.AddGuest(authorparam);
+                    return Ok(guest);
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch
+            {
+                //log Exception
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete("{name}")]
+        [Route("DeleteGuest")]
+        public void DeleteGuest(string  name)
+        { 
+              _guestRepository.DeleteGuest(name);
+                 
+            
+        }
+
+
+
+        // GET: api/values
+        [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
