@@ -1,0 +1,41 @@
+﻿
+
+@model 
+
+@{ Layout = "_Layout"; ViewBag.Title = "All Reservations";}
+
+<h2>All Reservations</h2>
+
+
+<table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ReservationCode</th>
+            <th>CreationDate</th>
+            <th>Price</th>
+            <th>Currency</th>
+            <th>CheckInDate</th>
+            <th>CheckOutDate</th>
+            <th>Commission</th>
+            <th>Source</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+        <tr>
+            <td>@r.Id</td>
+            <td>@r.ReservationCode</td>
+            <td>@r.CreationDate</td>
+            <td>@r.Price</td>
+            <td>@r.Currency</td>
+            <td>@r.CheckInDate</td>
+            <td>@r.CheckOutDate</td>
+            <td>@r.Commission</td>
+            <td>@r.Source</td>
+
+        </tr>
+        }
+    </tbody>
+</table>

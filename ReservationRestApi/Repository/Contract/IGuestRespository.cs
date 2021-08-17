@@ -8,5 +8,6 @@ namespace ReservationRestApi.Repository.Contract
     {
         IEnumerable<T> GetAllGuest();
         Guest AddGuest(Guest guest);
+        void DeleteGuest(string name);
     }
 }

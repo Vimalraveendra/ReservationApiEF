@@ -10,10 +10,7 @@ namespace ReservationRestApi.Repository.Implementation
     {
         readonly ReservationContext _reservationContext;
 
-        public ReservationRepository(ReservationContext context)
-        {
-            _reservationContext = context;
-        }
+        public ReservationRepository(ReservationContext context) => _reservationContext = context;
 
         public IEnumerable<Reservation> GetAllReservations()
         {
