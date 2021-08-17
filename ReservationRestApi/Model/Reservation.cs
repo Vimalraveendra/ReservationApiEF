@@ -8,19 +8,17 @@ namespace ReservationRestApi.Model
     public class Reservation
     {   
         public int ReservationId { get; set; }
-        [Required,MaxLength(10)]
+        
         public  string ReservationCode { get; set; }
 
-        [Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime CreationDate { get; set; }
+      
+        public DateTime CreationDate= DateTime.Now;
 
         public double Price { get; set; }
 
-        [Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime CheckInDate { get; set; }
-
-        [Column(TypeName = "Date"), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime CheckOutDate { get; set; }
+        public DateTime CheckInDate = DateTime.Now;
+       
+        public DateTime CheckOutDate = DateTime.Now;
 
         public string Currency { get; set; }
 

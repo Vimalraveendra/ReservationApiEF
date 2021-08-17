@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReservationRestApi.Model;
 
 namespace ReservationRestApi.Migrations
 {
     [DbContext(typeof(ReservationContext))]
-    partial class ReservationContextModelSnapshot : ModelSnapshot
+    [Migration("20210816215411_SeedData1")]
+    partial class SeedData1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,13 +25,11 @@ namespace ReservationRestApi.Migrations
                 {
                     b.Property<int>("GuestId")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(15)
-                        .IsUnicode(false)
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime?>("DOB")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("Date");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -37,15 +37,11 @@ namespace ReservationRestApi.Migrations
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double?>("PostalCode")
                         .HasColumnType("float");
@@ -110,13 +106,13 @@ namespace ReservationRestApi.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CheckInDate")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CheckOutDate")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreationDate")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Currency")
                         .HasColumnType("nvarchar(max)");
@@ -127,8 +123,7 @@ namespace ReservationRestApi.Migrations
                     b.Property<string>("ReservationCode")
                         .IsRequired()
                         .HasMaxLength(10)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(10)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<decimal?>("commission")
                         .HasColumnType("decimal(18,2)");
@@ -141,9 +136,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 101,
-                            CheckInDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(2530),
-                            CheckOutDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(2550),
-                            CreationDate = new DateTime(2021, 8, 17, 0, 7, 49, 44, DateTimeKind.Local).AddTicks(3440),
+                            CheckInDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CheckOutDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "PLN",
                             Price = 120.0,
                             ReservationCode = "Qwertyuw"
@@ -151,9 +146,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 102,
-                            CheckInDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4370),
-                            CheckOutDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4370),
-                            CreationDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4360),
+                            CheckInDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CheckOutDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "PLN",
                             Price = 150.0,
                             ReservationCode = "Asdfghje"
@@ -161,9 +156,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 103,
-                            CheckInDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4410),
-                            CheckOutDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4420),
-                            CreationDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4410),
+                            CheckInDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CheckOutDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "PLN",
                             Price = 100.0,
                             ReservationCode = "Zxcvbnm"
@@ -171,9 +166,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 104,
-                            CheckInDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4420),
-                            CheckOutDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4420),
-                            CreationDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4420),
+                            CheckInDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CheckOutDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "PLN",
                             Price = 180.0,
                             ReservationCode = "Lkjhgfds"
@@ -181,9 +176,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 105,
-                            CheckInDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4430),
-                            CheckOutDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4430),
-                            CreationDate = new DateTime(2021, 8, 17, 0, 7, 49, 51, DateTimeKind.Local).AddTicks(4430),
+                            CheckInDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CheckOutDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "PLN",
                             Price = 200.0,
                             ReservationCode = "Oiuytrew"
@@ -195,7 +190,6 @@ namespace ReservationRestApi.Migrations
                     b.HasOne("ReservationRestApi.Model.Reservation", "Reservation")
                         .WithMany("Guest")
                         .HasForeignKey("ReservationId")
-                        .HasConstraintName("FK_Guest_Reservation")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
