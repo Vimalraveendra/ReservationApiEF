@@ -29,6 +29,10 @@ namespace ReservationRestApi.Model
                 entity.Property(e => e.CheckOutDate)
                 .HasColumnType("date");
 
+                entity.Property(e => e.Commission)
+                .HasPrecision(16, 3);
+
+
             });
 
            

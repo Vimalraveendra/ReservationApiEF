@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReservationRestApi.Model;
 
 namespace ReservationRestApi.Migrations
 {
     [DbContext(typeof(ReservationContext))]
-    partial class ReservationContextModelSnapshot : ModelSnapshot
+    [Migration("20210817040347_SeedData3")]
+    partial class SeedData3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,10 +126,6 @@ namespace ReservationRestApi.Migrations
                     b.Property<DateTime>("CheckOutDate")
                         .HasColumnType("date");
 
-                    b.Property<decimal?>("Commission")
-                        .HasPrecision(16, 3)
-                        .HasColumnType("decimal(16,3)");
-
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("date");
 
@@ -143,6 +141,9 @@ namespace ReservationRestApi.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(10)");
 
+                    b.Property<decimal?>("commission")
+                        .HasColumnType("decimal(18,2)");
+
                     b.HasKey("ReservationId");
 
                     b.ToTable("Reservations");
@@ -151,9 +152,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 101,
-                            CheckInDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(5590),
-                            CheckOutDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(5600),
-                            CreationDate = new DateTime(2021, 8, 17, 6, 9, 50, 914, DateTimeKind.Local).AddTicks(9130),
+                            CheckInDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(7770),
+                            CheckOutDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(7780),
+                            CreationDate = new DateTime(2021, 8, 17, 6, 3, 46, 52, DateTimeKind.Local).AddTicks(5200),
                             Currency = "PLN",
                             Price = 120.0,
                             ReservationCode = "Qwertyuw"
@@ -161,9 +162,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 102,
-                            CheckInDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7390),
-                            CheckOutDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7390),
-                            CreationDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7380),
+                            CheckInDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9660),
+                            CheckOutDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9670),
+                            CreationDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9650),
                             Currency = "PLN",
                             Price = 150.0,
                             ReservationCode = "Asdfghje"
@@ -171,9 +172,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 103,
-                            CheckInDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7430),
-                            CheckOutDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7430),
-                            CreationDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7430),
+                            CheckInDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9960),
+                            CheckOutDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9970),
+                            CreationDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9960),
                             Currency = "PLN",
                             Price = 100.0,
                             ReservationCode = "Zxcvbnm"
@@ -181,9 +182,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 104,
-                            CheckInDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7440),
-                            CheckOutDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7440),
-                            CreationDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7440),
+                            CheckInDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9970),
+                            CheckOutDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9970),
+                            CreationDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9970),
                             Currency = "PLN",
                             Price = 180.0,
                             ReservationCode = "Lkjhgfds"
@@ -191,9 +192,9 @@ namespace ReservationRestApi.Migrations
                         new
                         {
                             ReservationId = 105,
-                            CheckInDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7450),
-                            CheckOutDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7450),
-                            CreationDate = new DateTime(2021, 8, 17, 6, 9, 50, 920, DateTimeKind.Local).AddTicks(7450),
+                            CheckInDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9980),
+                            CheckOutDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9980),
+                            CreationDate = new DateTime(2021, 8, 17, 6, 3, 46, 58, DateTimeKind.Local).AddTicks(9980),
                             Currency = "PLN",
                             Price = 200.0,
                             ReservationCode = "Oiuytrew"

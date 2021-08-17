@@ -27,6 +27,10 @@ namespace ReservationRestApi.Model
 
         
         public int ReservationId { get; set; }
+
+        public string Telephone { get; set; }
+        public string  Address { get; set; }
+        public string  City { get; set; }
      
     }
 }
