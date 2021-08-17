@@ -22,7 +22,7 @@ namespace ReservationRestApi.Model
 
         public string Currency { get; set; }
 
-        public decimal? commission { get; set; }
+        public decimal? Commission { get; set; }
 
         public ICollection<Guest>Guest { get; set; }
 

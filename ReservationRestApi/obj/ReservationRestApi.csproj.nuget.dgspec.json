@@ -14,7 +14,7 @@
         "outputPath": "/Users/vimalraveendran/Desktop/EF/ReservationRestApi/ReservationRestApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vimalraveendran/.config/NuGet/NuGet.Config"
+          "/Users/vimalraveendran/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
